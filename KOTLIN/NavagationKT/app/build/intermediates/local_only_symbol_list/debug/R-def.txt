@@ -1,0 +1,29 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable ic_baseline_accessibility_24
+drawable ic_baseline_menu_24
+drawable ic_baseline_search_24
+drawable ic_baseline_send_24
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id access
+id btn_navi
+id layout_drawer
+id naviView
+id search
+id send
+layout activity_main
+menu navi_menu
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Theme.NavagationKT
+xml backup_rules
+xml data_extraction_rules
