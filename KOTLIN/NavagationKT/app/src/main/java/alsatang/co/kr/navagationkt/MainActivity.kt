@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.access -> {showToast("액세스")}
-            R.id.search -> {showToast("서피")}
+            R.id.search -> {showToast("서치")}
             R.id.send -> {showToast("전송")}
         }
         layout_drawer.closeDrawers()
