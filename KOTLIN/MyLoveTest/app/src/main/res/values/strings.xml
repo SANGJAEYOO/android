@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyLoveTest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main_title">그냥 하는\n심리테스트</string>
+    <string name="question">정보전략 쓰레기에\n대하여\n어떻게 생각하는가?</string>
+</resources>
