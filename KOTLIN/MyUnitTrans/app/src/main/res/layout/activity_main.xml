@@ -16,6 +16,7 @@
         android:textColor="@color/purple_700"
         android:textColorHint="@color/purple_200"
         android:textSize="30sp"
+        android:maxLength="9"
 
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
