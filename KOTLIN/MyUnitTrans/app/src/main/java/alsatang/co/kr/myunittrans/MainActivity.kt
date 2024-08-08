@@ -3,6 +3,7 @@ package alsatang.co.kr.myunittrans
 import alsatang.co.kr.myunittrans.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import android.widget.TextView
 import androidx.core.widget.addTextChangedListener
@@ -10,6 +11,8 @@ import androidx.core.widget.addTextChangedListener
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding:ActivityMainBinding
+    var  inputNumber:Int = 0
+    var cmToM = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,8 +26,6 @@ class MainActivity : AppCompatActivity() {
         val txtOutputUnit = binding.txtOutputUnit
         val btnSwitch = binding.btnSwitch
 
-        var  inputNumber:Int = 0
-        var cmToM = true
 
         edtInput.addTextChangedListener { text ->
             inputNumber = if(text.isNullOrEmpty()){
@@ -62,4 +63,18 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putBoolean("cmToM",cmToM)
+
+        super.onSaveInstanceState(outState)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle ) {
+        cmToM = savedInstanceState.getBoolean("cmToM")
+        binding.txtInputUnit.text = if(cmToM) "cm" else "m"
+        binding.txtOutputUnit.text = if(cmToM) "m" else "cm"
+        super.onRestoreInstanceState(savedInstanceState)
+    }
+
 }
